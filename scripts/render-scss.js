@@ -8,10 +8,10 @@ const sass = require('sass');
 const sh = require('shelljs');
 
 const stylesPath = '../src/scss/styles.scss';
-const destPath = upath.resolve(upath.dirname(__filename), '../dist/css/styles.css');
+const destPath = upath.resolve(upath.dirname(__filename), '../docs/css/styles.css');
 
 module.exports = function renderSCSS() {
-    
+
     const results = sass.renderSync({
         data: entryPoint,
         includePaths: [

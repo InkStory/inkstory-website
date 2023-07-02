@@ -7,13 +7,13 @@ const sh = require('shelljs');
 module.exports = function renderScripts() {
 
     const sourcePath = upath.resolve(upath.dirname(__filename), '../src/js');
-    const destPath = upath.resolve(upath.dirname(__filename), '../dist/.');
-    
+    const destPath = upath.resolve(upath.dirname(__filename), '../docs/.');
+
     sh.cp('-R', sourcePath, destPath)
 
     const sourcePathScriptsJS = upath.resolve(upath.dirname(__filename), '../src/js/scripts.js');
-    const destPathScriptsJS = upath.resolve(upath.dirname(__filename), '../dist/js/scripts.js');
-    
+    const destPathScriptsJS = upath.resolve(upath.dirname(__filename), '../docs/js/scripts.js');
+
     const copyright = `/*!
 * Start Bootstrap - ${packageJSON.title} v${packageJSON.version} (${packageJSON.homepage})
 * Copyright 2013-${new Date().getFullYear()} ${packageJSON.author}
@@ -21,6 +21,6 @@ module.exports = function renderScripts() {
 */
 `
     const scriptsJS = fs.readFileSync(sourcePathScriptsJS);
-    
+
     fs.writeFileSync(destPathScriptsJS, copyright + scriptsJS);
 };
