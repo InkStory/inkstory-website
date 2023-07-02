@@ -39,7 +39,7 @@ html(lang='en')
                             a.nav-link.me-lg-3(href='#features') Features
                         li.nav-item
                             a.nav-link.me-lg-3(href='#download') Download
-                    button.btn.btn-primary.rounded-pill.px-3.mb-2.mb-lg-0(data-bs-toggle='modal', data-bs-target='#feedbackModal')
+                    button.btn.btn-primary.rounded-pill.px-3.mb-2.mb-lg-0(data-bs-toggle='modal', data-bs-target='#tattooModal')
                         span.d-flex.align-items-center
                             i.bi-soundwave.me-2
                             span.small Create tattoo
@@ -148,16 +148,6 @@ html(lang='en')
                         .px-5.px-sm-0
                             img.img-fluid.rounded-circle(src='https://source.unsplash.com/u8Jn2rzYIps/900x900', alt='...')
 
-        // Call to action section
-        section.cta
-            .cta-content
-                .container.px-5
-                    h2.text-white.display-1.lh-1.mb-4
-                        | Experience the Magic.
-                        br
-                        | Immerse Yourself Now.
-                    a.btn.btn-outline-light.py-3.px-4.rounded-pill(href='https://startbootstrap.com/theme/new-age', target='_blank') Download for free
-
         // App badge section
         section#download.bg-gradient-primary-to-secondary
             .container.px-5
@@ -179,10 +169,11 @@ html(lang='en')
                     span.mx-1 &middot;
                     a(href='#!') FAQ
 
-        include includes/feedback-modal.pug
+        include includes/tattoo-modal.pug
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
+            
 
         // Core theme JS
         script(src='js/scripts.js')

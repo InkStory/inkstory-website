@@ -11160,3 +11160,12 @@ footer a:hover, footer a:active, footer a:focus {
     max-width: 17rem;
   }
 }
+
+#tattooModal #tattoo-canvas {
+  min-height: 40vh;
+  background: #dee2e6;
+  image-rendering: pixelated;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}

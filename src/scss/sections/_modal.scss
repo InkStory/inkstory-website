@@ -1,0 +1,10 @@
+#tattooModal {
+    #tattoo-canvas {
+        min-height: 40vh;
+        background: #dee2e6;
+        image-rendering: pixelated;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+}

@@ -1,0 +1,13 @@
+#tattooModal.modal.modal-lg.fade(tabindex='-1', aria-labelledby='tattooModalLabel', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header.bg-gradient-primary-to-secondary.p-4
+                h5#feedbackModalLabel.modal-title.font-alt.text-white Unleash Your Inspiration!
+                button.btn-close.btn-close-white(type='button' data-bs-dismiss='modal', aria-label='Close')
+            .modal-body.border-0.p-4
+                .container-fluid
+                    .row
+                        #tattoo-canvas.mb-2
+                    .row
+                        input#sound.d-none(type='file', accept='audio/*')
+                        button#create-tattoo.btn.btn-primary.rounded-pill Select sound
