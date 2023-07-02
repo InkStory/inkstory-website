@@ -5,15 +5,15 @@ html(lang='en')
 
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='')
-        meta(name='author', content='')
+        meta(name='description', content='Turn your tattoos into audible memories!')
+        meta(name='author', content='Sergey Zelenov')
 
-        title New Age - Start Bootstrap Theme
+        title InkStory
 
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
 
         // Bootstrap icons
-        link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css', rel='stylesheet')
+        link(href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css', rel='stylesheet')
 
         // Google fonts
         link(rel='preconnect', href='https://fonts.gstatic.com')
@@ -29,7 +29,7 @@ html(lang='en')
         // Navigation
         nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.shadow-sm
             .container.px-5
-                a.navbar-brand.fw-bold(href='#page-top') Start Bootstrap
+                a.navbar-brand.fw-bold(href='#page-top') InkStory
                 button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     | Menu
                     i.bi-list
@@ -41,8 +41,8 @@ html(lang='en')
                             a.nav-link.me-lg-3(href='#download') Download
                     button.btn.btn-primary.rounded-pill.px-3.mb-2.mb-lg-0(data-bs-toggle='modal', data-bs-target='#feedbackModal')
                         span.d-flex.align-items-center
-                            i.bi-chat-text-fill.me-2
-                            span.small Send Feedback
+                            i.bi-soundwave.me-2
+                            span.small Create tattoo
 
         // Mashead header
         header.masthead
@@ -51,8 +51,10 @@ html(lang='en')
                     .col-lg-6
                         // Mashead text and app badges
                         .mb-5.mb-lg-0.text-center.text-lg-start
-                            h1.display-1.lh-1.mb-3 Showcase your app beautifully.
-                            p.lead.fw-normal.text-muted.mb-5 Launch your mobile app landing page faster with this free, open source theme from Start Bootstrap!
+                            h1.display-1.lh-1.mb-3 Unleash the Sound of Your Tattoos
+                            p.lead.fw-normal.text-muted.mb-5.
+                                Welcome to InkStory, the mobile app that lets you upload sounds you want to memorize and brings them to
+                                life with your soundwave tattoos! It's a new and exciting way to make your memories last forever.
                             .d-flex.flex-column.flex-lg-row.align-items-center
                                 a.me-lg-3.mb-4.mb-lg-0(href='#!')
                                     img.app-badge(src='assets/img/google-play-badge.svg', alt='...')
@@ -67,20 +69,18 @@ html(lang='en')
                             .device-wrapper
                                 .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
                                     .screen.bg-black
-                                        // PUT CONTENTS HERE:
-                                        // * * This can be a video, image, or just about anything else.
-                                        // * * Set the max width of your media to 100% and the height to
-                                        // * * 100% like the demo example below.
                                         video(muted='muted', autoplay='', loop='', style='max-width: 100%; height: 100%;')
-                                            source(src='assets/img/demo-screen.mp4', type='video/mp4')
+                                            source(src='assets/img/video.mp4', type='video/mp4')
 
         // Quote/testimonial aside
         aside.text-center.bg-gradient-primary-to-secondary
             .container.px-5
                 .row.gx-5.justify-content-center
                     .col-xl-8
-                        .h2.fs-1.text-white.mb-4 "An intuitive solution to a common problem that we all face, wrapped up in a single app!"
-                        img(src='assets/img/tnw-logo.svg', alt='...', style='height: 3rem;')
+                        .h2.fs-1.text-white.mb-4.
+                            "InkStory brought my tattoos to life, allowing me to scan them and listen to the nostalgic
+                            sounds that are forever etched on my skin."
+                        p.lead.text-white - Liam Anderson
 
         // App features section
         section#features
@@ -92,28 +92,33 @@ html(lang='en')
                                 .col-md-6.mb-5
                                     // Feature item
                                     .text-center
-                                        i.bi-phone.icon-feature.text-gradient.d-block.mb-3
-                                        h3.font-alt Device Mockups
-                                        p.text-muted.mb-0 Ready to use HTML/CSS device mockups, no Photoshop required!
+                                        i.bi-heart-pulse.icon-feature.text-gradient.d-block.mb-3
+                                        h3.font-alt Memorable Sounds
+                                        p.text-muted.mb-0 Revisit and relish the most important audios that have shaped your life.
                                 .col-md-6.mb-5
                                     // Feature item
                                     .text-center
-                                        i.bi-camera.icon-feature.text-gradient.d-block.mb-3
-                                        h3.font-alt Flexible Use
-                                        p.text-muted.mb-0 Put an image, video, animation, or anything else in the screen!
+                                        i.bi-phone.icon-feature.text-gradient.d-block.mb-3
+                                        h3.font-alt Scan & Listen
+                                        p.text-muted.mb-0 Instantly scan soundwave tattoos and unleash the hidden audio.
                             .row
                                 .col-md-6.mb-5.mb-md-0
                                     // Feature item
                                     .text-center
-                                        i.bi-gift.icon-feature.text-gradient.d-block.mb-3
-                                        h3.font-alt Free to Use
-                                        p.text-muted.mb-0 As always, this theme is free to download and use for any purpose!
+                                        i.bi-images.icon-feature.text-gradient.d-block.mb-3
+                                        h3.font-alt Up to 5 Tattoos
+                                        p.text-muted.mb-0.
+                                            Each tattoo represents a unique audio experience, and with the ability to
+                                            store up to 5 tattoos, you can curate a diverse and meaningful collection
+                                            that reflects your personal journey.
                                 .col-md-6
                                     // Feature item
                                     .text-center
-                                        i.bi-patch-check.icon-feature.text-gradient.d-block.mb-3
-                                        h3.font-alt Open Source
-                                        p.text-muted.mb-0 Since this theme is MIT licensed, you can use it commercially!
+                                        i.bi-currency-exchange.icon-feature.text-gradient.d-block.mb-3
+                                        h3.font-alt One-Time Payment for Core Functionality
+                                        p.text-muted.mb-0.
+                                            Enjoy the essential features of InkStory without any additional financial
+                                            obligations, as you explore the captivating world of soundwave tattoos.
                     .col-lg-4.order-lg-0
                         // Features section device mockup
                         .features-device-mockup
@@ -123,20 +128,22 @@ html(lang='en')
                             .device-wrapper
                                 .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
                                     .screen.bg-black
-                                        // PUT CONTENTS HERE:
-                                        // * * This can be a video, image, or just about anything else.
-                                        // * * Set the max width of your media to 100% and the height to
-                                        // * * 100% like the demo example below.
-                                        video(muted='muted', autoplay='', loop='', style='max-width: 100%; height: 100%;')
-                                            source(src='assets/img/demo-screen.mp4', type='video/mp4')
+                                        img(style='max-width: 100%; height: 100%;', src='assets/img/splashscreen.png', alt='InkStory')
 
         // Basic features section
         section.bg-light
             .container.px-5
                 .row.gx-5.align-items-center.justify-content-center.justify-content-lg-between
                     .col-12.col-lg-5
-                        h2.display-4.lh-1.mb-4 Enter a new age of web design
-                        p.lead.fw-normal.text-muted.mb-5.mb-lg-0 This section is perfect for featuring some information about your application, why it was built, the problem it solves, or anything else! There's plenty of space for text here, so don't worry about writing too much.
+                        h2.display-4.lh-1.mb-4 Where Tattoos Sing and Memories Resonate
+                        p.lead.fw-normal.text-muted.mb-5.
+                            InkStory was built with a passion for bridging the gap between body art and audio
+                            experiences. We recognized that tattoos hold profound meaning for individuals, serving as
+                            powerful symbols of self-expression. However, traditional tattoos lack an auditory dimension
+                            that can enhance the personal connection to the art.
+                        p.lead.fw-normal.text-muted.mb-5.mb-lg-0.
+                            By merging the visual and auditory realms, InkStory brings tattoos to life in a whole new
+                            way, fostering deeper emotional connections and evoking nostalgic memories.
                     .col-sm-8.col-md-6
                         .px-5.px-sm-0
                             img.img-fluid.rounded-circle(src='https://source.unsplash.com/u8Jn2rzYIps/900x900', alt='...')
@@ -146,9 +153,9 @@ html(lang='en')
             .cta-content
                 .container.px-5
                     h2.text-white.display-1.lh-1.mb-4
-                        | Stop waiting.
+                        | Experience the Magic.
                         br
-                        | Start building.
+                        | Immerse Yourself Now.
                     a.btn.btn-outline-light.py-3.px-4.rounded-pill(href='https://startbootstrap.com/theme/new-age', target='_blank') Download for free
 
         // App badge section
@@ -165,13 +172,13 @@ html(lang='en')
         footer.bg-black.text-center.py-5
             .container.px-5
                 .text-white-50.small
-                    .mb-2 &copy; Your Website 2023. All Rights Reserved.
+                    .mb-2 &copy; InkStory 2023. All Rights Reserved.
                     a(href='#!') Privacy
                     span.mx-1 &middot;
                     a(href='#!') Terms
                     span.mx-1 &middot;
                     a(href='#!') FAQ
-        
+
         include includes/feedback-modal.pug
 
         // Bootstrap core JS
@@ -179,10 +186,3 @@ html(lang='en')
 
         // Core theme JS
         script(src='js/scripts.js')
-
-        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-        // * *                               SB Forms JS                               * *
-        // * * Activate your form at https://startbootstrap.com/solution/contact-forms * *
-        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-
-        script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
