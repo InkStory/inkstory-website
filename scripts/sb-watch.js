@@ -7,6 +7,7 @@ const renderAssets = require('./render-assets');
 const renderPug = require('./render-pug');
 const renderScripts = require('./render-scripts');
 const renderSCSS = require('./render-scss');
+const renderStaticPages = require('./render-static-pages');
 
 const watcher = chokidar.watch('src', {
     persistent: true,
@@ -28,13 +29,13 @@ watcher.on('ready', () => {
 _handleSCSS();
 
 function _processFile(filePath, watchEvent) {
-    
+
     if (!READY) {
         if (filePath.match(/\.pug$/)) {
             if (!filePath.match(/includes/) && !filePath.match(/mixins/) && !filePath.match(/\/pug\/layouts\//)) {
                 allPugFiles[filePath] = true;
-            }    
-        }    
+            }
+        }
         process.stdout.write('.');
         return;
     }
@@ -58,6 +59,10 @@ function _processFile(filePath, watchEvent) {
 
     if (filePath.match(/src\/assets\//)) {
         return renderAssets();
+    }
+
+    if (filePath.match(/src\/pages\//)) {
+        return renderStaticPages();
     }
 
 }
