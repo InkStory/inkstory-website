@@ -1,0 +1,76 @@
+#faqModal.modal.modal-lg.fade(tabindex='-1', aria-labelledby='faqModalLabel', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header.bg-gradient-primary-to-secondary.p-4
+                h5#feedbackModalLabel.modal-title.font-alt.text-white Frequently Asked Questions
+                button.btn-close.btn-close-white(type='button' data-bs-dismiss='modal', aria-label='Close')
+            .modal-body.border-0.p-4
+                .container-fluid
+                    #accordionExample.accordion
+                        .accordion-item
+                            h2.accordion-header
+                                button.accordion-button(type="button", data-bs-toggle="collapse", data-bs-target="#collapseOne", aria-expanded="true", aria-controls="collapseOne")
+                                    | How does the application work its magic?
+                            #collapseOne.accordion-collapse.collapse.show(data-bs-parent="#accordionExample")
+                                .accordion-body.
+                                    InkStory works by seamlessly matching the tattoo on your skin with the pre-uploaded
+                                    image. If the images match successfully, the app unleashes the sound you attached to
+                                    the image, creating a captivating audio experience. This unique functionality allows
+                                    you to fine-tune and adjust the image if needed, ensuring a perfect match between
+                                    your tattoo and the original picture you created.
+                        .accordion-item
+                            h2.accordion-header
+                                button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#collapseTwo", aria-expanded="false", aria-controls="collapseTwo")
+                                    | Can I use the application for multiple tattoos?
+                            #collapseTwo.accordion-collapse.collapse(data-bs-parent="#accordionExample")
+                                .accordion-body.
+                                    Absolutely! InkStory supports up to 5 tattoos for each user. If you have a single
+                                    tattoo that is large in size, you can upload different parts of the tattoo and
+                                    assign the same sound to each section. This unique feature allows you to scan any
+                                    part of your tattoo and unlock the sound of the entire design, providing a cohesive
+                                    audio experience that encompasses the entirety of your artwork.
+                        .accordion-item
+                            h2.accordion-header
+                                button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#collapseThree", aria-expanded="false", aria-controls="collapseThree")
+                                    | Can I add my existing tattoos to the application?
+                            #collapseThree.accordion-collapse.collapse(data-bs-parent="#accordionExample")
+                                .accordion-body.
+                                    Absolutely! We encourage you to bring new meaning to your existing tattoos by
+                                    adding them to InkStory. The process is simple: just upload a photo of your tattoo
+                                    and attach the desired sound. No special actions are required – it's as easy as
+                                    before, allowing you to enhance your existing tattoos with a captivating audio
+                                    element. Let your tattoos come alive with the power of sound using InkStory.
+                        .accordion-item
+                            h2.accordion-header
+                                button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#collapseFour", aria-expanded="false", aria-controls="collapseFour")
+                                    | Can I add sound to tattoos of different shapes?
+                            #collapseFour.accordion-collapse.collapse(data-bs-parent="#accordionExample")
+                                .accordion-body.
+                                    Absolutely! You can add sound to any tattoo, regardless of its shape or design.
+                                    Whether it's a portrait of a loved one, a stunning piece of art, or a unique
+                                    composition, you have the freedom to attach sound to any tattoo that holds meaning
+                                    to you. InkStory embraces the diversity of tattoo shapes and allows you to create
+                                    an audio experience that complements your individual style and personal expression.
+                        .accordion-item
+                            h2.accordion-header
+                                button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#collapseFive", aria-expanded="false", aria-controls="collapseFive")
+                                    | Is my data secure in the app?
+                            #collapseFive.accordion-collapse.collapse(data-bs-parent="#accordionExample")
+                                .accordion-body.
+                                    Absolutely! We prioritize the privacy and security of your personal information.
+                                    All your audio files and associated photos are securely stored within the InkStory
+                                    app. You can have peace of mind knowing that your data is kept confidential and
+                                    protected from unauthorized access. We take privacy seriously, ensuring that your
+                                    data remains safe and secure on your device.
+                        .accordion-item
+                            h2.accordion-header
+                                button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#collapseSix", aria-expanded="false", aria-controls="collapseSix")
+                                    | What other features are planned for the future?
+                            #collapseSix.accordion-collapse.collapse(data-bs-parent="#accordionExample")
+                                .accordion-body.
+                                    We have an exciting roadmap ahead for InkStory! In the next release, we will
+                                    introduce the ability to add videos, expanding the possibilities beyond just sound.
+                                    Additionally, we have plans to incorporate various animations for your personal
+                                    skin art projects, including augmented reality experiences. Our team is continuously
+                                    working on innovative and exciting features to enhance your InkStory journey. Stay
+                                    tuned for more thrilling updates coming soon!

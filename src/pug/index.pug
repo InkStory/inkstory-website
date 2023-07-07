@@ -61,6 +61,8 @@ html(lang='en')
                             a.nav-link.me-lg-3(href='#features') Features
                         li.nav-item
                             a.nav-link.me-lg-3(href='#download') Download
+                        li.nav-item
+                            a.nav-link.me-lg-3(href='#!', data-bs-toggle='modal', data-bs-target='#faqModal') FAQ
                     button.btn.btn-primary.rounded-pill.px-3.mb-2.mb-lg-0(data-bs-toggle='modal', data-bs-target='#tattooModal')
                         span.d-flex.align-items-center
                             i.bi-soundwave.me-2
@@ -78,10 +80,10 @@ html(lang='en')
                                 Welcome to InkStory, the mobile app that lets you upload sounds you want to memorize and brings them to
                                 life with your soundwave tattoos! It's a new and exciting way to make your memories last forever.
                             .d-flex.flex-column.flex-lg-row.align-items-center
-                                a.me-lg-3.mb-4.mb-lg-0(href='#!')
-                                    img.app-badge(src='assets/img/google-play-badge.svg', alt='...')
+                                a.me-lg-3.mb-4.mb-lg-0(href='https://play.google.com/store/apps/details?id=com.inkstory')
+                                    img.app-badge(src='assets/img/google-play-badge.svg', alt='InkStory google play')
                                 a(href='#!')
-                                    img.app-badge(src='assets/img/app-store-badge.svg', alt='...')
+                                    img.app-badge(src='assets/img/app-store-badge.svg', alt='InkStory app store')
                     .col-lg-6
                         // Masthead device mockup feature
                         .masthead-device-mockup
@@ -91,8 +93,7 @@ html(lang='en')
                             .device-wrapper
                                 .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
                                     .screen.bg-black
-                                        video(muted='muted', autoplay='', loop='', style='max-width: 100%; height: 100%;')
-                                            source(src='assets/img/video.mp4', type='video/mp4')
+                                        img(style='max-width: 100%; height: 100%;', src='assets/img/screenshot.jpeg', alt='InkStory')
 
         // Quote/testimonial aside
         aside.text-center.bg-gradient-primary-to-secondary
@@ -150,7 +151,8 @@ html(lang='en')
                             .device-wrapper
                                 .device(data-device='iPhoneX', data-orientation='portrait', data-color='black')
                                     .screen.bg-black
-                                        img(style='max-width: 100%; height: 100%;', src='assets/img/splashscreen.png', alt='InkStory')
+                                        video(muted='muted', autoplay='', loop='', style='max-width: 100%; height: 100%;')
+                                            source(src='assets/img/video.mp4', type='video/mp4')
 
         // Basic features section
         section.bg-light
@@ -189,9 +191,10 @@ html(lang='en')
                     span.mx-1 &middot;
                     a(href='#!') Terms
                     span.mx-1 &middot;
-                    a(href='#!') FAQ
+                    a(href='#!', data-bs-toggle='modal', data-bs-target='#faqModal') FAQ
 
         include includes/tattoo-modal.pug
+        include includes/faq-modal.pug
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
