@@ -11169,3 +11169,8 @@ footer a:hover, footer a:active, footer a:focus {
   justify-content: center;
   align-content: center;
 }
+
+#faqModal #ytvideo {
+  aspect-ratio: 16/9;
+  width: 100%;
+}
