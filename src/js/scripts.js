@@ -2,9 +2,28 @@
 // Scripts
 //
 
-const samples = 70;
+const samples = 560;
+const startColor = [121, 28, 253];
+const endColor = [57, 172, 246];
+
+let player;
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('ytvideo', {
+        height: '390',
+        width: '640',
+        videoId: 'h_D3VFfhvs4',
+        playerVars: {},
+    });
+}
 
 window.addEventListener('DOMContentLoaded', event => {
+
+    // Activate YouTube embeded iframe
+    const tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
     // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
@@ -41,7 +60,7 @@ window.addEventListener('DOMContentLoaded', event => {
             const audioContext = new AudioContext();
             const audioBuffer = await audioContext.decodeAudioData(reader.result);
 
-            if (audioBuffer.duration > 20) {
+            if (audioBuffer.duration > 60) {
                 console.error('file is too big');
                 return;
             }
@@ -97,6 +116,14 @@ window.addEventListener('DOMContentLoaded', event => {
         saveTattooButton.style.display = 'none';
     });
 
+    document.getElementById('collapseTwo').addEventListener('hide.bs.collapse', () => {
+        player.stopVideo();
+    });
+
+    document.getElementById('faqModal').addEventListener('hide.bs.modal', () => {
+        player.stopVideo();
+    });
+
     createTattooButton.addEventListener('click', () => {
         soundFileInput.click();
     });
@@ -124,9 +151,18 @@ function normalizeData(filteredData) {
     return filteredData.map(n => n * multiplier);
 }
 
+function interpolate(color1, color2, factor = 0.5) {
+    let result = color1.slice();
+    for (let i = 0; i < 3; i++) {
+        result[i] = Math.round(result[i] + factor * (color2[i] - color1[i]));
+    }
+    return result;
+}
+
 function draw(normalizedData) {
-    const barWidth = 4;
-    const gap = 4;
+    // make them dynamic?
+    const barWidth = 1;
+    const gap = 0;
 
     const audioSvg = document.createElementNS(
         "http://www.w3.org/2000/svg",
@@ -139,13 +175,14 @@ function draw(normalizedData) {
     for (let i = 0; i < normalizedData.length; i++) {
         const data = normalizedData[i];
         const height = Math.abs(data * 100);
+        const factor = i / samples;
 
         const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
 
         rect.setAttribute("transform", `translate(${i * (barWidth + gap)},${100 - height / 2})`);
         rect.setAttribute("width", barWidth.toString());
         rect.setAttribute("height", height.toString());
-        rect.setAttribute("fill", "#ffffff");
+        rect.setAttribute("fill", `rgb(${interpolate(startColor, endColor, factor).join(",")})`);
 
         audioSvg.appendChild(rect);
     }
