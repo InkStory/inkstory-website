@@ -2,9 +2,9 @@
 // Scripts
 //
 
-const samples = 560;
-const startColor = [121, 28, 253];
-const endColor = [57, 172, 246];
+const samples = 280;
+const startColor = [41, 55, 240];
+const endColor = [159, 26, 226];
 
 let player;
 function onYouTubeIframeAPIReady() {
@@ -161,7 +161,7 @@ function interpolate(color1, color2, factor = 0.5) {
 
 function draw(normalizedData) {
     // make them dynamic?
-    const barWidth = 1;
+    const barWidth = 2;
     const gap = 0;
 
     const audioSvg = document.createElementNS(
@@ -174,7 +174,7 @@ function draw(normalizedData) {
 
     for (let i = 0; i < normalizedData.length; i++) {
         const data = normalizedData[i];
-        const height = Math.abs(data * 100);
+        const height = Math.abs(data * 200);
         const factor = i / samples;
 
         const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
