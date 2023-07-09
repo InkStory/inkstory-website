@@ -63,10 +63,15 @@ window.addEventListener('DOMContentLoaded', event => {
         reader.onerror = (error) => console.error(error);
         reader.onload = async () => {
             const audioContext = new AudioContext();
-            const audioBuffer = await audioContext.decodeAudioData(reader.result);
+            const audioBuffer = await audioContext.decodeAudioData(reader.result).catch(_ => null);
+
+            if (!audioBuffer) {
+                alert('Unable to read the file, please try another one');
+                return;
+            }
 
             if (audioBuffer.duration > 60) {
-                console.error('file is too big');
+                alert('Selected audio file is too long, max. 60s');
                 return;
             }
 
