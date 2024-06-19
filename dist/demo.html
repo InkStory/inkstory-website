@@ -32,6 +32,26 @@
         <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .squared {
+                width: 100%; /* Set width to 100% to be responsive */
+                height: 0; /* Start with zero height */
+                padding-bottom: 100%; /* Create a square by setting padding-bottom to 100% */
+                object-fit: cover; /* Ensures the image covers the entire area without distortion */
+                border-radius: 50% !important; /* Ensures the image is a circle */
+                overflow: hidden; /* Ensures the overflowing parts of the image are hidden */
+                position: relative; /* Required for positioning the image correctly */
+            }
+
+            .squared img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Google Tag Manager (noscript)-->
@@ -58,28 +78,67 @@
                 </div>
             </div>
         </nav>
-        <!-- Mashead header-->
-        <header class="masthead">
+        <aside class="text-center bg-gradient-primary-to-secondary mt-5">
             <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6">
-                        <!-- Mashead text and app badges-->
-                        <div class="mb-5 mb-lg-0 text-center text-lg-start">
-                            <h1 class="display-1 lh-1 mb-3">Experience Our Demo</h1>
-                            <p class="lead fw-normal text-muted mb-5">Curious how it works? Simply scan the demo tattoo featured on our website and listen as the embedded soundwave transforms into audible magic. This immersive experience highlights how InkStory brings your most cherished memories to life, offering a novel way to connect with your past.</p>
-                            <div class="d-flex flex-column flex-lg-row align-items-center">
-                                <a class="me-lg-3 mb-4 mb-lg-0" href="#"><img class="app-badge" src="/assets/img/google-play-badge.svg" alt="InkStory Google Play" /></a>
-                                <a href="#!"><img class="app-badge" src="/assets/img/app-store-badge.svg" alt="InkStory App Store" /></a>
-                            </div>
-                        </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-xl-8"><div class="h2 fs-1 text-white mb-4">Explore Demo Tattoos & Sound Experiences: Discover & Customize Your Unique Ink! Just point the camera of your InkStory app at any of the tattoos on this screen to experience the true magic.</div></div>
+                </div>
+            </div>
+        </aside>
+        <aside class="text-center bg-gradient-primary-to-secondary"></aside>
+        <section class="bg-light">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+                    <div class="col-sm-8 col-md-6">
+                        <div class="px-5 px-sm-0 squared"><img class="img-fluid rounded-circle" src="https://i.pinimg.com/564x/b6/e9/74/b6e974f9ece39785d714a37a66292a8c.jpg" alt="..." /></div>
                     </div>
-                    <div class="col-lg-6">
-                        <!-- Masthead device mockup feature-->
-                        <div class="masthead-device-mockup"><img style="max-width: 100%; height: 100%" src="/assets/img/demo.webp" alt="InkStory" /></div>
+                    <div class="col-12 col-lg-5"><p class="lead fw-normal text-muted mb-5">A tattoo of a mother cradling her baby symbolizes deep love, protection, and the strong bond between them. It’s a beautiful reminder of the special moments and the unique, cherished relationship we all share with our moms.</p></div>
+                </div>
+            </div>
+        </section>
+        <aside class="text-center bg-gradient-primary-to-secondary"></aside>
+        <section class="bg-light">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+                    <div class="col-12 col-lg-5"><p class="lead fw-normal text-muted mb-5">A tattoo for couples symbolizes deep connection and mutual support. It represents their intertwined lives, enduring love, and the harmony they create together, embodying a sense of unity and shared journey.</p></div>
+                    <div class="col-sm-8 col-md-6">
+                        <div class="px-5 px-sm-0 squared"><img class="img-fluid rounded-circle" src="https://i.pinimg.com/564x/fa/7f/36/fa7f36d1c2bec3bcdee36d7f2c38a742.jpg" alt="..." /></div>
                     </div>
                 </div>
             </div>
-        </header>
+        </section>
+        <aside class="text-center bg-gradient-primary-to-secondary"></aside>
+        <section class="bg-light">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+                    <div class="col-sm-8 col-md-6">
+                        <div class="px-5 px-sm-0 squared"><img class="img-fluid rounded-circle" src="https://i.pinimg.com/736x/f2/61/1e/f2611e71c5daf8db1fe3fe91882cb571.jpg" alt="..." /></div>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                        <p class="lead fw-normal text-muted mb-5">
+                            Father...
+                            <a href="https://www.instagram.com/milano_tattooart" target="_blank">by Milad Adati</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside class="text-center bg-gradient-primary-to-secondary"></aside>
+        <section class="bg-light">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+                    <div class="col-12 col-lg-5">
+                        <p class="lead fw-normal text-muted mb-5">
+                            Amazing Soundwave Tattoo Design
+                            <a href="http://manstil.com/30-soundwave-tattoo-designs-fur-manner-acoustic-ink-ideen/" target="_blank">by ManStil</a>
+                        </p>
+                    </div>
+                    <div class="col-sm-8 col-md-6">
+                        <div class="px-5 px-sm-0 squared"><img class="img-fluid rounded-circle" src="https://i.pinimg.com/564x/4d/54/5a/4d545a19d8250fe3cd169688b88755f1.jpg" alt="..." /></div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- App badge section-->
         <section class="bg-gradient-primary-to-secondary" id="download">
             <div class="container px-5">
