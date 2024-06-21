@@ -6,15 +6,15 @@ const samples = 70;
 const startColor = [41, 55, 240];
 const endColor = [159, 26, 226];
 
-let player;
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player("ytvideo", {
-        height: "390",
-        width: "640",
-        videoId: "3fZAoBecLpU",
-        playerVars: {},
-    });
-}
+// let player;
+// function onYouTubeIframeAPIReady() {
+//     player = new YT.Player("ytvideo", {
+//         height: "390",
+//         width: "640",
+//         videoId: "3fZAoBecLpU",
+//         playerVars: {},
+//     });
+// }
 
 window.addEventListener("DOMContentLoaded", (event) => {
     // Activate YouTube embeded iframe
@@ -129,17 +129,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
             saveTattooButton.style.display = "none";
         });
 
-    document
-        .getElementById("collapseTwo")
-        .addEventListener("hide.bs.collapse", () => {
-            player.stopVideo();
-        });
+    // document
+    //     .getElementById("collapseTwo")
+    //     .addEventListener("hide.bs.collapse", () => {
+    //         player.stopVideo();
+    //     });
 
-    document
-        .getElementById("faqModal")
-        .addEventListener("hide.bs.modal", () => {
-            player.stopVideo();
-        });
+    // document
+    //     .getElementById("faqModal")
+    //     .addEventListener("hide.bs.modal", () => {
+    //         player.stopVideo();
+    //     });
 
     createTattooButton.addEventListener("click", () => {
         soundFileInput.click();
