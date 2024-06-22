@@ -44,6 +44,11 @@ html(lang='en')
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
 
+        script#mcjs.
+            !function (c, h, i, m, p) {
+                m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p)
+            }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/df6bd2a34e031f9db0bde6989/212c340f896918e5108dd9e2d.js");
+
         style.
             .squared {
                 width: 100%; /* Set width to 100% to be responsive */
