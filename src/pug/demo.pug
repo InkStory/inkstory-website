@@ -93,10 +93,10 @@ html(lang='en')
                             a.nav-link.me-lg-3(href='/demo.html') Demo
                         li.nav-item
                             span.nav-link.me-lg-3(data-bs-toggle='modal', data-bs-target='#faqModal', style='cursor: pointer') FAQ
-                    button.btn.btn-primary.rounded-pill.px-3.mb-2.mb-lg-0(data-bs-toggle='modal', data-bs-target='#tattooModal')
+                    button.btn.btn-primary.rounded-pill.px-3.mb-2.mb-lg-0(data-bs-toggle='modal', data-bs-target='#contactModal')
                         span.d-flex.align-items-center
-                            i.bi-soundwave.me-2
-                            span.small Get Inspired
+                            i.bi-envelope.me-2
+                            span.small Contact us
 
         aside.text-center.bg-gradient-primary-to-secondary.mt-5
             .container.px-5
@@ -169,13 +169,14 @@ html(lang='en')
             .container.px-5
                 .text-white-50.small
                     .mb-2 &copy; InkStory 2024. All Rights Reserved.
+                    .mb-2 inkstory.care@gmail.com
                     a(href='/privacy.html') Privacy
                     span.mx-1 &middot;
                     a(href='/terms.html') Terms
                     span.mx-1 &middot;
                     a(href='#!', data-bs-toggle='modal', data-bs-target='#faqModal') FAQ
 
-        include includes/tattoo-modal.pug
+        include includes/contact.pug
         include includes/faq-modal.pug
 
         // Bootstrap core JS
@@ -183,6 +184,9 @@ html(lang='en')
 
         // Core theme JS
         script(src='js/scripts.js')
+
+        // typeform
+        script(src="//embed.typeform.com/next/embed.js")
 
         // Google Tag Manager
         script.
