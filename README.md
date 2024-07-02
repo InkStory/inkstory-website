@@ -9,7 +9,7 @@ life with your Sonic Ink! It's a new and exciting way to make your memories last
 <img src="./src/assets/img/app-store-badge.svg" alt="InkStory on AppStore" width="200"/>
 </a>
 <br/>
-<a href="#!">
+<a href="https://play.google.com/store/apps/details?id=com.sergey.zelenov.inkstory">
 <img src="./src/assets/img/google-play-badge.svg" alt="InkStory on Google Play" width="200"/>
 </a>
 
